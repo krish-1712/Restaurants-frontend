@@ -1,0 +1,50 @@
+  .application-header {
+    color: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 2px solid var(--border);
+    background-image: url('https://previews.123rf.com/images/klyaksun/klyaksun2008/klyaksun200800169/153400253-cafe-or-restaurant-terrace-with-table-umbrella-and-chairs-at-night-vector-cartoon-illustration.jpg');
+  }
+
+  .branding {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .brand-name {
+    font-size: 26px;
+
+    font-weight: bold;
+    color: #ff5733;
+
+    margin: 0;
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Times New Roman', serif;
+    margin-left: 470px;
+  }
+
+  .nav-options {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon {
+    font-size: 1.5rem;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .icon:hover {
+    color: var(--accent);
+  }

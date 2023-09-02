@@ -1,0 +1,26 @@
+.app-container {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+
+
+.app-container>.menu-navigation-container {
+  width: 20%;
+  height: 100%;
+  background: #f6f6f6;
+}
+
+.app-container>.main-container {
+  width: 60%;
+  height: 100%;
+  background: #dcdcdc;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.app-container>.cart-container {
+  width: 20%;
+  height: 100%;
+  background: #f6f6f6;
+}

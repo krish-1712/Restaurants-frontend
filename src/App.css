@@ -1,0 +1,11 @@
+:root {
+  --primary: #000000;
+  --light: #ffffff;
+  --border: #f2f2f2;
+}
+
+body{
+  background-image: url("https://img.freepik.com/free-vector/night-scene-hamburgers-french-fries-shop-with-chair-table-nature-park_1150-48789.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

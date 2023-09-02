@@ -1,0 +1,9 @@
+.icon-cta {
+  font-size: 1.4rem;
+  padding: 20px;
+}
+
+.icon-cta:hover {
+  border-radius: 5px;
+  background-color: rgba(15, 20, 25, 0.1);
+}
