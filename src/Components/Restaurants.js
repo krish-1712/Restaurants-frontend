@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 
 const Restaurants = () => {
-    const [restaurants, setRestaurants] = useState([]);
-    const navigate = useNavigate();
-    
+  const [restaurants, setRestaurants] = useState([]);
+  const navigate = useNavigate();
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -35,17 +35,17 @@ const Restaurants = () => {
 
 
   return (
-  
+
     <main className='main-container'>
       {restaurants.length > 0 ? (
         restaurants.map((data, index) => (
-          <RestaurantCard key={index} data={data}   handleClick={handleRestaurantSelect} /> 
+          <RestaurantCard key={index} data={data} handleClick={handleRestaurantSelect} />
         ))
       ) : (
         <p>No restaurants available.</p>
       )}
     </main>
-    
+
   )
 }
 

@@ -1,4 +1,3 @@
-// Register.js
 import React, { useEffect } from 'react';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -7,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { url } from '../App';
 import './Register.css';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const userSchemaValidation = yup.object({
@@ -58,7 +57,7 @@ function Register() {
             name="firstname"
             value={values.firstname}
             onChange={handleChange}
-            style={{"width":"90%"}}
+            style={{ "width": "90%" }}
           />
           {touched.firstname && errors.firstname ? <p className="error-message">{errors.firstname}</p> : ''}
         </Form.Group>
@@ -71,7 +70,7 @@ function Register() {
             name="lastname"
             value={values.lastname}
             onChange={handleChange}
-            style={{"width":"90%"}}
+            style={{ "width": "90%" }}
           />
           {touched.lastname && errors.lastname ? <p className="error-message">{errors.lastname}</p> : ''}
         </Form.Group>
@@ -84,7 +83,7 @@ function Register() {
             name="emailaddress"
             value={values.email}
             onChange={handleChange}
-            style={{"width":"90%"}}
+            style={{ "width": "90%" }}
           />
           {touched.email && errors.email ? <p className="error-message">{errors.email}</p> : ''}
         </Form.Group>
@@ -98,12 +97,12 @@ function Register() {
             name="password"
             value={values.password}
             onChange={handleChange}
-            style={{"width":"90%"}}
+            style={{ "width": "90%" }}
           />
           {touched.password && errors.password ? <p className="error-message">{errors.password}</p> : ''}
         </Form.Group>
-  
-  
+
+
         <Button type="submit" className="submit-button">
           Signup
         </Button>

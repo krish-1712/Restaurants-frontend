@@ -11,24 +11,6 @@ const RestaurantDetails = () => {
     const { id } = useParams();
     const [foods, setFoods] = useState([]);
 
-
-    //   useEffect(() => {
-    //     async function fetchData() {
-    //       try {
-    //         const response = await axios.get(`${url}/users/getAllFood/${id}`);
-    //         const result = response.data;
-    //         if (result.data.length > 0) {
-    //           setRestaurants(result.data);
-    //         }
-    //       } catch (error) {
-    //         console.error('An error occurred:', error);
-    //       }
-    //     }
-
-    //     fetchData();
-    //   }, []);
-
-
     useEffect(() => {
         if (id) {
             async function fetchData() {
@@ -48,18 +30,18 @@ const RestaurantDetails = () => {
         }
     }, [id]);
     return (
-      
-            <main className='main-container'>
 
-                {foods.length > 0 ? (
-                    foods.map((data, index) => (
-                        <ProductCard key={index} data={data} />
-                    ))
-                ) : (
-                    <p>No restaurants available.</p>
-                )}
-            </main>
-          
+        <main className='main-container'>
+
+            {foods.length > 0 ? (
+                foods.map((data, index) => (
+                    <ProductCard key={index} data={data} />
+                ))
+            ) : (
+                <p>No restaurants available.</p>
+            )}
+        </main>
+
     )
 }
 
