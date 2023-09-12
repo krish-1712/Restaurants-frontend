@@ -77,10 +77,10 @@ function Register() {
         <Form.Group className="mb-3">
           <Form.Label className="form-label">Email Address</Form.Label>
           <Form.Control
-            type="text"
+            type="email"
             placeholder="Enter the Email Address"
             className="form-input"
-            name="emailaddress"
+            name="email"
             value={values.email}
             onChange={handleChange}
             style={{ "width": "90%" }}
@@ -91,7 +91,7 @@ function Register() {
         <Form.Group className="mb-3">
           <Form.Label className="form-label">Password</Form.Label>
           <Form.Control
-            type="text"
+            type="password"
             placeholder="Enter the Password"
             className="form-input"
             name="password"
