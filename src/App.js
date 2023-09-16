@@ -9,9 +9,9 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 import Forgot from './Components/Forgot';
 import Password from './Components/Password';
+export const url = "https://restaurants-wyu5.onrender.com"
 
 
-export const url = "http://localhost:5000"
 const App = () => {
 
 
