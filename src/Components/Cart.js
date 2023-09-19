@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { url } from '../App';
 import './Cart.css';
 import { Button } from 'react-bootstrap';
+import { toast } from 'react-toastify';
 
 const Cart = () => {
   const location = useLocation();
@@ -20,8 +21,10 @@ const Cart = () => {
           const response = await axios.get(`${url}/users/get-cart/${userId}`);
           console.log('Response data:', response.data);
           setCartData(response.data);
+          toast.success(response.data.message);
         } catch (error) {
           console.error('Error fetching cart:', error);
+          toast.error(error.response.data.message);
         }
       };
 

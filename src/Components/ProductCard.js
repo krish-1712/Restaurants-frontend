@@ -3,6 +3,7 @@ import './RestaurantCard.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { url } from '../App';
+import { toast } from 'react-toastify';
 
 function renderFoodTypes(type = []) {
   let icons = [];
@@ -41,10 +42,12 @@ const ProductCard = ({ data = {}, cartData = [], updateCartData }) => {
         if (response.status === 200) {
 
           navigate("/cart", { state: { userId } });
+          toast.success(response.data.message);
         }
       }
     } catch (error) {
       console.error('Error adding to cart:', error);
+      toast.error(error.response.data.message);
     }
   };
 

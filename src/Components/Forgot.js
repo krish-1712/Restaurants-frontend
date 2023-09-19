@@ -22,6 +22,7 @@ const Forgot = () => {
       try {
         const response = await axios.post(`${url}/users/reset`, { values });
         console.log(response)
+        toast.success(response.data.message);
 
         if (response.status === 200) {
           toast.success(response.data.message);

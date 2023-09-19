@@ -3,6 +3,7 @@ import RestaurantCard from './RestaurantCard';
 import axios from 'axios';
 import { url } from '../App';
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 
 const Restaurants = () => {
@@ -17,8 +18,10 @@ const Restaurants = () => {
         if (result.data.length > 0) {
           setRestaurants(result.data);
         }
+        toast.success(response.data.message);
       } catch (error) {
         console.error('An error occurred:', error);
+        toast.error(error.response.data.message);
       }
     }
 
